@@ -3,47 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Успешный вход</title>
+    <title>Успешный вход — BiPri Launcher</title>
     <style>
+        /* Сброс стилей и базовые настройки */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
         body {
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f9;
             color: #333;
             display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Стили для шапки (иконка и название) */
+        .header {
+            padding: 20px 30px;
+            display: flex;
+            align-items: center;
+            gap: 12px; /* Расстояние между иконкой и текстом */
+        }
+        
+        .header-icon {
+            width: 32px;
+            height: 32px;
+               background-image: url('ссылка-на-картинку.png');
+               background-size: cover;
+        
+        }
+
+        .header-title {
+            font-size: 18px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* Стили для центрированного контента */
+        .main-content {
+            flex: 1;
+            display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
+            padding: 20px;
         }
-        .container {
+
+        .card {
             background: white;
-            padding: 40px;
-            border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            max-width: 400px;
+            padding: 40px 50px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+            text-align: center;
+            max-width: 450px;
         }
+
+        .icon-success {
+            font-size: 60px;
+            margin-bottom: 20px;
+        }
+
         h1 {
-            color: #4CAF50; /* Зеленый цвет для успеха */
-            font-size: 24px;
+            color: #4CAF50; /* Зеленый цвет */
+            font-size: 26px;
             margin-bottom: 15px;
         }
+
         p {
             font-size: 16px;
             line-height: 1.5;
-            color: #555;
-        }
-        .icon {
-            font-size: 50px;
-            margin-bottom: 10px;
+            color: #666;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <div class="icon">✅</div>
-        <h1>Успешный вход!</h1>
-        <p>Можете закрыть окно и вернуться в лаунчер.</p>
-    </div>
+
+    <!-- Шапка с иконкой и названием -->
+    <header class="header">
+        <!-- Иконка (если нужна картинка, см. комментарий в CSS) -->
+        <div class="header-icon">B</div>
+        <div class="header-title">BiPri Launcher</div>
+    </header>
+
+    <!-- Основной контент по центру -->
+    <main class="main-content">
+        <div class="card">
+            <div class="icon-success">✅</div>
+            <h1>Успешный вход!</h1>
+            <p>Можете закрыть окно и вернуться в лаунчер.</p>
+        </div>
+    </main>
+
 </body>
 </html>
